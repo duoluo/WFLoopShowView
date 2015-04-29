@@ -176,7 +176,7 @@ static CGFloat const kPageControlHeigth = 18;
     NSInteger rearViewIndex = [self getViewValidIndex:self.currentViewIndex + 1];
     
     if (self.contentViews == nil) {
-        self.contentViews = [@[] mutableCopy];
+        self.contentViews = [NSMutableArray array];
     }
     [self.contentViews removeAllObjects];
     
@@ -189,7 +189,7 @@ static CGFloat const kPageControlHeigth = 18;
 
 - (void)loadImage:(NSArray *)imagesData
 {
-    self.imageViews = [@[] mutableCopy];
+    self.imageViews = [NSMutableArray array];
     
     for (int i = 0; i < [imagesData count]; i++) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
